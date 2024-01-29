@@ -57,7 +57,7 @@ export default function Deposit() {
     <div className="w-full flex items-center justify-center">
       <div className="p-0 md:p-6 pb-4 bg-background md:border md:shadow-md rounded-2xl w-full max-w-2xl">
         <div className="flex items-center justify-between">
-          <h2 className="font-bold text-2xl">Deposit</h2>
+          <h2 className="text-lg md:text-2xl font-bold uppercase">Deposit</h2>
 
           <div className="flex items-center gap-x-1">
             <p className="flex items-center mr-2">
@@ -120,7 +120,7 @@ export default function Deposit() {
 
               <Button
                 type="submit"
-                className="h-14 rounded-3xl text-lg font-medium">
+                className="h-12 md:h-14 rounded-lg md:rounded-full text-lg font-medium">
                 Stake
               </Button>
 
