@@ -6,7 +6,9 @@ export default function Portfolio() {
   return (
     <div className="flex-1 py-10">
       <Mx>
-        <h2 className="text-2xl mb-2 font-bold">Portfolio</h2>
+        <h2 className="text-lg md:text-2xl mb-2 font-bold uppercase">
+          Portfolio
+        </h2>
         <Tracker />
 
         <StakeLists />

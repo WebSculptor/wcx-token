@@ -5,29 +5,10 @@ import Mx from "./Mx";
 
 import { usePathname } from "next/navigation";
 
-import { ConnectButton, WalletButton } from "@rainbow-me/rainbowkit";
-
-import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-
-const links = [
-  {
-    name: "Stake",
-    path: "/",
-  },
-  {
-    name: "Lend",
-    path: "/lend",
-  },
-  {
-    name: "Borrow",
-    path: "/borrow",
-  },
-  {
-    name: "Portfolio",
-    path: "/portfolio",
-  },
-];
+import { cn, navLinks } from "@/lib/utils";
+import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
+import ConnectWallet from "./ConnectWallet";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -35,13 +16,11 @@ export default function Navbar() {
   return (
     <div className="border-b w-full sticky top-0 bg-background">
       <Mx className="w-full py-5 flex items-center justify-between">
-        <div className="flex items-center gap-12">
-          <Link href="/" className="font-bold text-lg">
-            BWC
-          </Link>
+        <div className="flex items-center gap-8">
+          <Logo />
 
-          <div className="flex items-center gap-x-8">
-            {links.map((link) => (
+          <div className="hidden lg:flex items-center gap-x-6">
+            {navLinks.map((link: NavLinks) => (
               <Link
                 key={link.path}
                 href={link.path}
@@ -55,20 +34,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        <ConnectButton
-          accountStatus={{
-            smallScreen: "avatar",
-            largeScreen: "full",
-          }}
-          chainStatus={{
-            smallScreen: "icon",
-            largeScreen: "full",
-          }}
-          showBalance={{
-            smallScreen: false,
-            largeScreen: true,
-          }}
-        />
+        <div className="flex items-center gap-x-4">
+          <ConnectWallet />
+
+          <div className="flex lg:hidden">
+            <MobileMenu />
+          </div>
+        </div>
       </Mx>
     </div>
   );
