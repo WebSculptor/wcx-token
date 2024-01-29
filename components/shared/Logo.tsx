@@ -13,7 +13,7 @@ export default function Logo({ path }: LogoProps) {
     <Link
       href={path ? path : "/"}
       className={cn("text-2xl md:text-3xl font-bold mt-1.5", gluten.className)}>
-      WCX.
+      BWC.
     </Link>
   );
 }

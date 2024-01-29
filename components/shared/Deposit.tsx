@@ -57,13 +57,15 @@ export default function Deposit() {
     <div className="w-full flex items-center justify-center">
       <div className="p-0 md:p-6 pb-4 bg-background md:border md:shadow-md rounded-2xl w-full max-w-2xl">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg md:text-2xl font-bold uppercase">Deposit</h2>
+          <h2 className="text-lg md:text-xl font-semibold uppercase">
+            Deposit
+          </h2>
 
           <div className="flex items-center gap-x-1">
             <p className="flex items-center mr-2">
               <IoWalletOutline className="w-5 h-5 text-primary mr-1" />
               <span className="font-medium text-sm">
-                {result?.data ? `WCX ${result?.data?.toString()}` : "WCX 0.00"}
+                WCX {result?.data ? result?.data?.toString() : 0}
               </span>
             </p>
 
@@ -92,10 +94,10 @@ export default function Deposit() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl className="h-16">
-                    <div className="rounded-full p-3 flex items-center border h-16">
+                    <div className="rounded-full p-3 pr-0 flex items-center border h-16">
                       <div className="rounded-full h-full border flex items-center gap-2 p-2 pr-3 bg-secondary">
                         <div className="w-6 h-6 rounded-full bg-background"></div>
-                        <p className="text-base font-bold">WCX</p>
+                        <p className="text-base font-bold">BWC</p>
                       </div>
 
                       <Input

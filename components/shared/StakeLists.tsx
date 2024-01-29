@@ -11,8 +11,8 @@ export default function StakeLists() {
         <Button variant="ghost">Transaction history</Button>
       </div>
 
-      <div className="w-full py-5 lg:px-9 rounded-lg bg-background shadow">
-        {Array.from({ length: 5 }).map((_, _key) => (
+      <div className="w-full lg:p-6 rounded-lg lg:bg-secondary/40 shadow space-y-4 lg:space-y-0 lg:border">
+        {Array.from({ length: 10 }).map((_, _key) => (
           <Stake key={_key} />
         ))}
       </div>

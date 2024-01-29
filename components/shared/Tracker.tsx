@@ -5,7 +5,7 @@ import { MousePointerSquare } from "lucide-react";
 
 export default function Tracker() {
   return (
-    <div className="bg-background w-full p-5 md:p-9 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-10 shadow border">
+    <div className="bg-secondary/40 w-full p-5 md:p-9 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-10 shadow border">
       <div className="flex flex-col md:items-start">
         <p className="text-sm md:text-lg font-medium">Total Liquidity staked</p>
         <h1 className="font-bold text-3xl md:text-5xl">$0.00</h1>
