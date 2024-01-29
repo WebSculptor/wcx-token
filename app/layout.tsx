@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
@@ -7,9 +7,8 @@ import Navbar from "@/components/shared/Navbar";
 import { WalletProviders } from "@/providers/WalletProviders";
 import "@rainbow-me/rainbowkit/styles.css";
 
-export const fontSans = FontSans({
+export const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +26,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen font-sans antialiased bg-background",
-          fontSans.variable
+          inter.className
         )}>
         <WalletProviders>
           <Navbar />
