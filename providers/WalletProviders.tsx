@@ -39,7 +39,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [publicProvider()]
 );
 
-const projectId = process.env.ALCHEMY_ID!;
+const projectId = "this is the alchemy id";
 
 const { wallets } = getDefaultWallets({
   appName: "Staking DApp",
